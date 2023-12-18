@@ -98,9 +98,9 @@ function removeKFromList(l, k ) {
 
   list.print();
 
-  while( list.indexOf(k) !== -1){
-    list.remove(k)
-  }
+  // while( list.indexOf(k) !== -1){
+  //   list.remove(k)
+  // }
 
 
   //console.log('indexOf',list.indexOf(k));
@@ -109,9 +109,9 @@ function removeKFromList(l, k ) {
   // list.remove(k)
   // list.print();
   //
-  console.log('\n')
+  // console.log('\n')
   // list.remove(k)
-  list.print();
+  // list.print();
   //
   // console.log('\n')
   // list.remove(k)
@@ -122,11 +122,66 @@ function removeKFromList(l, k ) {
   //list.print();
   //console.log(l)
 
+  console.log('\n')
+
+  // let myList = new ListNode(null);
+  // let resultList = myList;
+  // myList.head = l;
+  //
+  // let current = myList;
+  //
+  // while (current){
+  //
+  //   if (current.value !== k) {
+  //     console.log(current.value)
+  //     resultList.next = new ListNode(current.value);
+  //     resultList = resultList.next;
+  //
+  //   }
+  //   current = current.next;
+  // }
+
+  //list
+
+ // console.log('list',list)
+
+  //let current = list.head;
+
+
+  let l2 = list.head;
+  let current = l2;
+
+
+  let result;
+
+  while (current) {
+
+    if (current.value === k) {
+      if (!result) {
+        l2 = current.next;
+      } else {
+        result.next = current.next;
+      }
+    } else {
+      result = current;
+    }
+
+    current = current.next;
+  }
+
+  console.log(l2);
+
+
+
+
+
+
+
 
 }
-
-const l = [3, 1, 2, 3, 4, 5];
 const k = 3;
+const l = [k, 1, 2, k, 4, 5];
+
 
 removeKFromList(l,k);
 

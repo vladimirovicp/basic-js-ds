@@ -33,7 +33,6 @@ class ListNode {
 
 function removeKFromList(l, k) {
 
-
   let current = l;
   let result;
   while (current) {
